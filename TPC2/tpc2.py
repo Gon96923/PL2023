@@ -76,7 +76,7 @@ def main():
 
             h = indice
 
-    print("Soma final: "+str(total))
+    #print("Soma final: "+str(total))
     
 
 main()
