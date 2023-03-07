@@ -186,7 +186,7 @@ def main():
     f = open("processos.txt", "r")
     linhas = f.readlines()
     freq_por_ano(linhas)
-    
+    freq_por_nome(linhas)
     freq_relacao(linhas)
     convert_json(linhas)
     f.close()
