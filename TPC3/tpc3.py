@@ -17,12 +17,7 @@ def freq_por_ano(texto):
     for i in anos:
         print("Ano: "+str(i) +"_______Processos: "+str(anos[i]) )
 
-#575::1894-11-08::Aarao Pereira Silva::Antonio Pereira Silva::Francisca Campos Silva::kuugcgsictsiytcsv::
-#()::()::(aarao)::(Antonio)::(Francisca)::()::
-#2 -seculo
-#4-nome 7 10
-#6-sobrenome 9 12
-'''
+
 def freq_por_nome(texto):
     seculosNomes = dict()
     nomesSobreNomes = dict()
@@ -71,7 +66,7 @@ def freq_por_nome(texto):
     for i in nomesSobreNomes:
         for j in nomesSobreNomes[i]:
             print("Seculo: "+str(i)+"_______Nomes: "+str(j)+"_______Vezes: "+str(nomesSobreNomes[i][j]) )
-'''
+
 
 def freq_relacao(texto):
     relacoes = dict()
