@@ -27,37 +27,59 @@ def freq_por_nome(texto):
     for linhas in texto:
         if er.match(linhas):
             if er.match(linhas).group(2) in seculosNomes:
-                #print("hello")
                 if er.match(linhas).group(4) in seculosNomes[er.match(linhas).group(2)]:
                     seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(4)] += 1
-                    print("hello")
+                else:
+                    seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(4)] = 1
                 if er.match(linhas).group(7) in seculosNomes[er.match(linhas).group(2)]:
                     seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(7)] += 1
+                else:
+                    seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(7)] = 1
                 if er.match(linhas).group(10) in seculosNomes[er.match(linhas).group(2)]:
                     seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(10)] += 1
+                else:
+                    seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(10)] = 1
             else:
                 seculosNomes[er.match(linhas).group(2)] = {}
                 if er.match(linhas).group(4) in seculosNomes[er.match(linhas).group(2)]:
                     seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(4)] += 1
+                else:
+                    seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(4)] = 1
                 if er.match(linhas).group(7) in seculosNomes[er.match(linhas).group(2)]:
                     seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(7)] += 1
+                else:
+                    seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(7)] = 1
                 if er.match(linhas).group(10) in seculosNomes[er.match(linhas).group(2)]:
                     seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(10)] += 1
+                else:
+                    seculosNomes[er.match(linhas).group(2)][er.match(linhas).group(10)] = 1
             if er.match(linhas).group(2) in nomesSobreNomes:
                 if er.match(linhas).group(6) in nomesSobreNomes[er.match(linhas).group(2)]:
                     nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(6)] += 1
+                else:
+                    nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(6)] = 1
                 if er.match(linhas).group(9) in nomesSobreNomes[er.match(linhas).group(2)]:
                     nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(9)] += 1
+                else:
+                    nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(9)] = 1
                 if er.match(linhas).group(12) in nomesSobreNomes[er.match(linhas).group(2)]:
                     nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(12)] += 1
+                else:
+                    nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(12)] = 1
             else:
                 nomesSobreNomes[er.match(linhas).group(2)] = {}
                 if er.match(linhas).group(6) in nomesSobreNomes[er.match(linhas).group(2)]:
                     nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(6)] += 1
+                else:
+                    nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(6)] = 1
                 if er.match(linhas).group(9) in nomesSobreNomes[er.match(linhas).group(2)]:
                     nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(9)] += 1
+                else:
+                    nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(9)] = 1
                 if er.match(linhas).group(12) in nomesSobreNomes[er.match(linhas).group(2)]:
                     nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(12)] += 1
+                else:
+                    nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(12)] = 1
 
                 
     for i in seculosNomes:
