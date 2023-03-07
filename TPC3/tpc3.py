@@ -1,4 +1,4 @@
-import re
+iimport re
 import json
 
 def freq_por_ano(texto):
@@ -16,6 +16,7 @@ def freq_por_ano(texto):
                 
     for i in anos:
         print("Ano: "+str(i) +"_______Processos: "+str(anos[i]) )
+
 
 
 def freq_por_nome(texto):
@@ -80,14 +81,13 @@ def freq_por_nome(texto):
                     nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(12)] += 1
                 else:
                     nomesSobreNomes[er.match(linhas).group(2)][er.match(linhas).group(12)] = 1
-
                 
     for i in seculosNomes:
         for j in seculosNomes[i]:
             print("Seculo: "+str(i)+"_______Nomes: "+str(j)+"_______Vezes: "+str(seculosNomes[i][j]) )
     for i in nomesSobreNomes:
         for j in nomesSobreNomes[i]:
-            print("Seculo: "+str(i)+"_______Nomes: "+str(j)+"_______Vezes: "+str(nomesSobreNomes[i][j]) )
+            print("Seculo: "+str(i)+"_______SobreNomes: "+str(j)+"_______Vezes: "+str(nomesSobreNomes[i][j]) )
 
 
 def freq_relacao(texto):
@@ -185,10 +185,22 @@ def convert_json(texto):
 def main():
     f = open("processos.txt", "r")
     linhas = f.readlines()
-    freq_por_ano(linhas)
-    freq_por_nome(linhas)
-    freq_relacao(linhas)
-    convert_json(linhas)
+
+    print("1 - Frequência de processos por ano")
+    print("2 - Frequência de nomes próprios e apelidos")
+    print("3 - Frequência dos vários tipos de relação")
+    print("4 - Converter em json")
+    texto = input("Insira o texto a lêr:\n")
+    if texto == '1':
+        freq_por_ano(linhas)
+    elif texto == '2':
+        freq_por_nome(linhas)
+    elif texto == '3':
+        freq_relacao(linhas)
+    elif texto == '4':
+        convert_json(linhas)
+    else:
+        print("Opção não executável")
     f.close()
 
 
